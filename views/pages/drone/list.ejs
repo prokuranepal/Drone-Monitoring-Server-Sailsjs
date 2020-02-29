@@ -1,0 +1,16 @@
+<div id="list">
+    <div class="container text-center">
+        <h1>List of all drones.</h1>
+        <ul>
+            <% for (i=0; i<drones.length; i++) { %>
+                <li>
+                    <a href="/<%= drones[i].drone_name %>">
+                        <%= drones[i].drone_name %> - 
+                        <%= drones[i].drone_location %>
+                    </a>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+</div>
+<%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>

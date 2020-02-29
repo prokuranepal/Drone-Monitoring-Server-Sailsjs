@@ -15,6 +15,7 @@ module.exports.routes = {
   //  ╚╩╝╚═╝╚═╝╩  ╩ ╩╚═╝╚═╝╚═╝
   'GET /':                   { action: 'view-homepage-or-redirect' },
   'GET /welcome/:unused?':   { action: 'dashboard/view-welcome' },
+  'GET /dronelist':          { action: 'drone/list' },
 
   'GET /faq':                { action:   'view-faq' },
   'GET /legal/terms':        { action:   'legal/view-terms' },
@@ -62,4 +63,7 @@ module.exports.routes = {
   'POST  /api/v1/entrance/update-password-and-login':    { action: 'entrance/update-password-and-login' },
   'POST  /api/v1/deliver-contact-form-message':          { action: 'deliver-contact-form-message' },
 
+  'GET /:drone_name':        { view:   'pages/drone/display' },
+  'GET /:drone_name/hello':  { action: 'hello'},
+  'GET /:drone_name/pi':     { action: 'drone/pisocket'},
 };

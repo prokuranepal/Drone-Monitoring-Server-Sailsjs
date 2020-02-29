@@ -1,0 +1,30 @@
+<div class="container-fluid-fill">
+    <!-- TODO:Cpanel page is needed to added here for superuser/admin user -->
+    <div class="row">
+        <div class="m-1 pl-3">
+            <button type="button" class="btn btn-primary show-parameters" data-toggle="collapse" data-target="#demo">Show</button>
+        </div>
+        <div class="m-1">
+            <button class="btn btn-dark read-mission" type="button" onclick="ReadMission()">Read Mission</button>
+        </div>
+        <div class="m-1">
+            <button class="btn btn-dark clear-mission" type="button" onclick="ClearMission()">Clear Display</button>
+        </div>
+        <div class="m-1">
+            <input title="radius" placeholder="radius" type="text" id="data" class="form-inline radius-input" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+        </div>
+        <div class="m-1">
+            <button class="btn btn-dark radius-button" type="button" onclick="abc()">Draw Circle</button>
+        </div>
+    </div>
+    <div id="map" style="height: 87%; width: 100%; " class="position-absolute">
+    </div>
+
+    <div id="demo" class="collapse float-left position-absolute">
+        <%- partial('../../partials/table_data.ejs') %>
+    </div>
+
+    <div id="snackbar">Message</div>
+    
+</div>
+
